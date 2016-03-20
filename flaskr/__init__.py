@@ -1,8 +1,9 @@
 from flask import Flask
-from flask.ext.sqalchemy import SQLAlchemy
+from flask.ext.sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
-app.comfig.from_object('flaskr.config')
+app.config.from_object('flaskr.config')
+
 db = SQLAlchemy(app)
 
 import flaskr.views
